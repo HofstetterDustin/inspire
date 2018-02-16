@@ -18,8 +18,25 @@ function TodoController() {
 		//WHAT IS MY PURPOSE?
 		//BUILD YOUR TODO TEMPLATE HERE
 		var template = ''
+		if (todos.length < 1){
+			todosElem.innerHTML = '<h3>The force is stronge with you.</h3>'
+			return
+		}
+		todos.forEach(todos => {
+			template += `
+			<div class="card p-1 flex space-between">
+				<div class="Details">
+					${todos.info}
+				</div>
+<!--place edit here-->			
+				</div>
+			`
+		})
 		//DONT FORGET TO LOOP
+		todosElem.innerHTML = template
 	}
+	getTodos()
+	console.log()
 
 	this.addTodoFromForm = function (e) {
 		e.preventDefault() // <-- hey this time its a freebie don't forget this

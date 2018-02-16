@@ -1,7 +1,7 @@
 function TodoService() {
 	// A local copy of your todos
 	var todoList = []
-	var baseUrl = 'https://inspire-server.herokuapp.com/api/todos/YOURNAMEHERE'
+	var baseUrl = 'https://inspire-server.herokuapp.com/api/todos/Darth_Hofstetter'
 
 	function logError(err) {
 		console.error('UMM SOMETHING BROKE: ', err)
@@ -10,11 +10,14 @@ function TodoService() {
 	}
 
 	this.getTodos = function (draw) {
+		// debugger
 		$.get(baseUrl)
 			.then(function (res) { // <-- WHY IS THIS IMPORTANT????
-				
+				todoList = res
+				cd(todoList)
 			})
 			.fail(logError)
+			console.log ("Does this Work")
 	}
 
 	this.addTodo = function (todo) {

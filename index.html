@@ -7,22 +7,64 @@
 </head>
 
 <body id="body">
-	<div id="weather">
-		Your Weather Template
+	<div class="container-fluid">
+<!--Background Stuff-->
+		<div class="text-center">
+			<img class="img-responsive" src="https://cdn.thinglink.me/api/image/498216076111249410/1240/10/scaletowidth" />
+<!--Weather Stuff-->		
+			<div id="weather">
+				Your Weather Template
+			</div>
+<!--Quote Stuff-->		
+			<div id="quote">
+				The Quote
+			</div>
+<!--ToDo Stuff-->		
+			<div id="todo">
+				<div class="?">
+					<h1 id="page-title">To Do Tasks</h1>
+					<form onsubmit="app.controllers.todosCtrl.todo(e)">
+						<div class="form-group">
+							<div>
+								<input type="text" name="todos" class="form-control">
+							</div>
+							<div>
+									<input type="text" name="todos" class="form-control">
+							</div>
+							<div>
+									<input type="text" name="todos" class="form-control">
+							</div>
+							<div>
+									<input type="text" name="todos" class="form-control">
+							</div>
+						</div>
+
+					</form>
+					
+				</div>
+				
+			<div id="todos" class="header">
+				<h2>My To Do List</h2>
+				<input type="text" id="myInput" placeholder="Title...">
+				<span onclick="newElement()" class="addBtn">Add</span>
+			</div>
+			
+			<ul id="myUL">
+				<li>Hit the gym</li>
+				<li class="checked">Pay bills</li>
+				<li>Meet George</li>
+				<li>Buy eggs</li>
+				<li>Read a book</li>
+				<li>Organize office</li>
+			</ul>
+				
+			</div>
+			
+		</div>
+		
+		
+		
 	</div>
-
-	<div id="quote">
-		The Quote
-	</div>
-
-	<div id="todo">
-		<form onsubmit=""></form>
-		A Todo List
-	</div>
-
-
-
-
 	<!--JS Libraries-->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<!--Services-->
