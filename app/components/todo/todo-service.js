@@ -44,7 +44,7 @@ function TodoService() {
 			method: 'PUT',
 			contentType: 'application/json',
 			url: baseUrl + '/' + todoId,
-			data: JSON.stringify(YOURTODOVARIABLEHERE)
+			data: JSON.stringify(task)
 		})
 			.then(function (res) {
 				//DO YOU WANT TO DO ANYTHING WITH THIS?

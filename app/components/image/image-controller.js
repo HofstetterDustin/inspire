@@ -4,17 +4,19 @@ function ImageController() {
 	var imageService = new ImageService()
 
 	this.getImage = function getImage(){
-		debugger
 		imageService.getImage(draw)
 	}
-		
-	function draw(image){
-		var image = ''
+	
+	function draw(res){
+		debugger
+		var image = res
+		var pic = "url(" + image.url + ")"
 		if(image.length<1) {
-			document.body.style.background = "<h1><strong>The Dark Side Has Won!</strong></h1>"
+			document.getElementById.style.backgroundImage = "<h1><strong>The Dark Side Has Won!</strong></h1>"
 			return
 		}
-		document.body.style.backgroundImage = `url('${imagedata.largeurl}')`
+		document.getElementById("body").style.backgroundImage = pic
+		
 	}
 	
 
